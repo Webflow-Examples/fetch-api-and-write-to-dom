@@ -51,10 +51,10 @@ window.addEventListener("DOMContentLoaded", async () => {
   // add class to each image (class exists in Webflow)
   // append each item to movie grid
   movies.forEach((movie) => {
-    const img = document.createElement("img");
-    img.classList.add("movie-image");
-    img.src = `${IMAGE_PATH}${movie.poster_path}`;
-    movieGrid.appendChild(img);
+    const moviePoster = document.createElement("img");
+    moviePoster.classList.add("movie-image");
+    moviePoster.src = `${IMAGE_PATH}${movie.poster_path}`;
+    movieGrid.appendChild(moviePoster);
   });
 
   // remove loader and show movie grid
