@@ -73,6 +73,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   // initial styles
   movieGrid.style.opacity = "0%";
+  document.body.style.overflow = "hidden";
 
   // set featured movie
   const featuredMovie = movies[movies.length - 1];
@@ -102,6 +103,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     loader.style.opacity = "0%";
     loader.classList.toggle("hide");
     movieGrid.style.opacity = "100%";
+    document.body.style.overflow = "auto";
   }, 1500);
 });
 ```
