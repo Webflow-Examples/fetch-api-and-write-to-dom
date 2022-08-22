@@ -34,13 +34,10 @@ window.addEventListener("DOMContentLoaded", async () => {
   // initial styles
   movieGrid.style.opacity = "0%";
 
-  // set a random featured movie for the hero section
-  let randomMovie = Number(
-    Math.floor((Math.random() * movies?.length).toFixed())
-  );
-  const featuredMovie = movies[randomMovie !== 0 && randomMovie - 1];
+  // set featured movie
+  const featuredMovie = movies[movies.length - 1];
 
-  // set hero elements
+  // set hero/featured elements
   heroImage.classList.add("hero-image");
   heroImage.src = featuredMovie
     ? `${BACKDROP_PATH}${featuredMovie.backdrop_path}`
