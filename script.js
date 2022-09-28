@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   // global constants
   const IMAGE_PATH = "https://image.tmdb.org/t/p/w500";
   const BACKDROP_PATH = "https://image.tmdb.org/t/p/original";
-  const API_URL = "https://dev--movies.api-for-webflow.autocode.gg/";
+  const API_URL = "https://api-for-webflow.autocode.dev/movies@dev/";
 
   // functions
   async function getData() {
