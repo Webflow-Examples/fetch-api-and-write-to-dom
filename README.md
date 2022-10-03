@@ -25,6 +25,8 @@ Next is an async await function to get the data. If there is an error, we remove
 
 Next is the async await function to get our data and assign it to a variable.
 
+If there's an error fetching data, show the error state and return.
+
 Next we get our page elements.
 
 Next we set the movie grid opacity to 0% because the Webflow class has a transition on the opacity. This will give it a fade in effect when we add 100% opacity later in our code. We also set overflow hidden on the body to temporarily hide the scrollbar.
@@ -62,6 +64,12 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   // get data
   const movies = await getData();
+
+  // stop executing code if error fetching data
+  if (!movies) {
+    errorDetected();
+    return;
+  }
 
   // dom elements
   const loader = document.getElementById("loader");
