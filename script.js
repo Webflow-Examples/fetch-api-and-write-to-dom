@@ -23,6 +23,12 @@ window.addEventListener("DOMContentLoaded", async () => {
   // get data
   const movies = await getData();
 
+  // stop executing code if error fetching data
+  if (!movies) {
+    errorDetected();
+    return;
+  }
+
   // dom elements
   const loader = document.getElementById("loader");
   const hero = document.getElementById("hero");
